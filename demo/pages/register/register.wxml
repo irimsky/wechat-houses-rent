@@ -1,0 +1,68 @@
+<view class="container">
+
+	<view class="login-from">
+
+		<!--账号-->
+		<view class="inputView">
+			<image class="nameImage" src="/images/user.png"></image>
+			<input type="number" class="inputText" placeholder="手机号" bindinput="phoneInput" />
+		</view>
+		<view class="line"></view>
+
+		<!--密码-->
+		<view class="inputView">
+			<image class="keyImage" src="/images/pswd.png"></image>
+			<input class="inputText" password="true" placeholder="密码" bindinput="passwordInput" />
+		</view>
+
+		<view class="line"></view>
+		<!--密码-->
+		<view class="inputView">
+			<image class="keyImage" src=""></image>
+			<input class="inputText" password="true" placeholder="确认密码" bindinput="verpwdInput" />
+		</view>
+
+		<view class='hr'></view>
+		<!--姓名-->
+		<view class="inputView">
+			<image class="nameImage" src=""></image>
+			<input class="left_input" placeholder="姓名" bindinput="nameInput" />
+		</view>
+
+		<view class='hr'></view>
+
+		<textarea class="textarea" placeholder="住址" maxlength="100" bindinput="OnAdsInput" auto-height="true"></textarea>
+
+
+
+		<radio-group class="idview" bindchange="identChange">
+			<radio value="1" class="radiopad" checked="true">租赁者</radio>
+			<radio value="2" class="radiopad">房主</radio>
+		</radio-group>
+
+
+		<view wx:if="{{ident=='1'}}">
+			<view class="inputView">
+				<image class="nameImage" src=""></image>
+				<input class="left_input" type="idcard" placeholder="身份证号" bindinput="idInput" />
+			</view>
+			<radio-group class="idview" bindchange="genderChange">
+				<radio value="1" class="radiopad" checked="true">男</radio>
+				<radio value="2" class="radiopad">女</radio>
+			</radio-group>
+		</view>
+
+		<view class="ava">
+			<label>选择头像：</label>
+			<view class="avatar">
+				<image class="avatar_icon" mode="aspectFill" bindtap="avaClick" src="{{avaSrc}}"></image>
+			</view>
+		</view>
+
+		<!--按钮-->
+		<view class="loginBtnView">
+			<button class="loginBtn" type="primary" bindtap="register">注册</button>
+		</view>
+
+	</view>
+</view>

@@ -1,0 +1,97 @@
+<!--pages/user_info/user.wxml-->
+<view class='amountBg'>
+	<view class='img'>
+		<image class="img2" mode="aspectFill" src="{{avaurl}}"></image>
+	</view>
+	<view class='account'>
+		<view class='nick-name'>
+			{{name}}
+		</view>
+		<view class='address'>
+			{{phone}} · {{identity}}
+		</view>
+	</view>
+	<view class="editBtn" wx:if="{{phone==user_phone}}" bindtap="updateClick">修改</view>
+</view>
+
+<view class="hr"></view>
+<view class='item'>
+	<text class='itemName'>住址</text>
+	<view class='right'>{{ads}}</view>
+</view>
+<view class="hr"></view>
+
+<block wx:if="{{identity=='租赁者'}}">
+	<view class='item'>
+		<text class='itemName'>性别</text>
+		<view class='right'>{{sex}}</view>
+	</view>
+	<view class="hr"></view>
+
+	<view class='item'>
+		<text class='itemName'>身份证号</text>
+		<view class='right'>{{id}}</view>
+	</view>
+	<view class="hr"></view>
+</block>
+
+<view class='item'>
+	<text class='itemName'>注册时间</text>
+	<view class='right'>{{reg_date}}</view>
+</view>
+<view class="line"></view>
+
+<view class='item' wx:if="{{user_phone==phone}}">
+	<text class='itemName'>租赁次数</text>
+	<view class='right'>{{rent_cnt}}</view>
+
+</view>
+<view class="hr"></view>
+<block wx:if="{{identity=='房主' && user_phone==phone}}">
+	<view class='item'>
+		<text class='itemName'>交易总额</text>
+		<view class='right'>￥{{sum_deal}}</view>
+	</view>
+	<view class="hr"></view>
+</block>
+
+<block wx:if="{{identity=='房主'}}">
+	<view class='item'>
+		<text class='itemName'>出租房屋</text>
+		<view class='right'>{{house_cnt}}</view>
+
+	</view>
+	<view class="hr"></view>
+	<block wx:for='{{houses}}' wx:for-index="idx" wx:key="item">
+		<view class="container_house" data-id="{{item.id}}" bindtap="onItemClick">
+			<view class='container-img_house'>
+				<image mode="aspectFill" class="img-test_house" src='https://irimskydb.oss-cn-beijing.aliyuncs.com/pics/{{item.id}}/1.jpg' lazy-load="true"></image>
+			</view>
+
+			<view class='container-content_house'>
+				<view class='user-info_house'>
+					<view class='user-name-time_house'>
+						<view class='user-name_house'>{{item.ads}}</view>
+					</view>
+				</view>
+
+				<view class='content_house'>
+
+					<text class='content-text_house'>最大房客数：{{item.maxg}}</text>
+
+					<view class="tagView_house">
+						<text wx:if="{{item.status=='待租'}}" class="tagText-n">待租</text>
+						<text wx:else class="tagText-r">已租</text>
+						<view wx:for="{{item.type}}" wx:key="tag" wx:for-item="tag">
+							<text class="tagText">{{tag}}</text>
+						</view>
+					</view>
+
+					<view class='user-publish-time'>{{item.rent}} <text class="font-rent-unit">元/月</text></view>
+				</view>
+			</view>
+		</view>
+		<view class='hr'></view>
+	</block>
+
+</block>

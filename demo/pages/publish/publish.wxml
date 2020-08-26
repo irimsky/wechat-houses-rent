@@ -1,0 +1,16 @@
+<!--miniprogram/pages/marry/marry.wxml-->
+
+<!-- <view class="bg-grey">
+    
+  </view> -->
+
+
+<view class="text-content">
+	<view class='text-area'>
+		<textarea placeholder="说点什么吧~" placeholder-class="holder" bindinput='getTextAreaContent' maxlength="500"></textarea>
+	</view>
+</view>
+
+<view class='btn-func'>
+	<button class="btn" bindtap="submit" disabled="{{!abled}}">发布贴子</button>
+</view>

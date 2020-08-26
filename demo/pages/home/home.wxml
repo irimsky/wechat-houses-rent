@@ -1,0 +1,73 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view>
+	<view>
+		<view class="weui-search-bar">
+
+			<view class="weui-search-bar__form">
+				<!-- 搜索框 -->
+				<view class="weui-search-bar__box">
+					<icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+					<input type="text" class="weui-search-bar__input" placeholder="请输入房屋名称或房型关键词" bindinput="OnSearchInput" />
+				</view>
+			</view>
+			<!-- 搜索按钮,调用搜索查询方法 -->
+			<view class="weui-search-bar__cancel-btn" bindtap='OnSearchClick'>搜索</view>
+		</view>
+	</view>
+</view>
+
+<view>
+	<view>
+		<view class="weui-elect-bar">
+			<view class="elect-bar-inner">
+				<checkbox-group class="elect-bar-inner" bindchange="OnCheckChange">
+					<checkbox>显示已租出</checkbox>
+				</checkbox-group>
+			</view>
+			<view class="elect-bar-inner">
+				<view class="font3">租金预算：</view>
+				<input type="number" class="inputRent" maxlength="5" bindinput="OnDownInput"></input>
+				<view class="font2">~</view>
+				<input type="number" class="inputRent" maxlength="5" bindinput="OnUpInput"></input>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+<button class="add-button" type="primary" bindtap="OnPostHouseClick" wx:if="{{ident=='host'}}">+</button>
+
+<block wx:for='{{houses}}' wx:key="item">
+	<block wx:if="{{item.status=='待租' || showRent==1 }}">
+
+		<view class="container" data-id="{{item.id}}" bindtap="onItemClick">
+			<view class='container-img'>
+				<image mode="aspectFill" class="img-prev" src='你的图片链接' lazy-load="true"></image>
+			</view>
+
+			<view class='container-content'>
+				<view class='house-title'>
+					<view class='house-ads'>
+						<view class='user-name'>{{item.ads}}</view>
+					</view>
+				</view>
+
+				<view class='content'>
+
+					<text class='content-maxg'>最大房客数：{{item.maxg}}</text>
+
+					<view class="tagView">
+						<text wx:if="{{item.status=='待租'}}" class="tagText-n">待租</text>
+						<text wx:else class="tagText-r">已租</text>
+						<view wx:for="{{item.type}}" wx:key="tag" wx:for-item="tag">
+							<text class="tagText">{{tag}}</text>
+						</view>
+					</view>
+
+					<view class='font-rent'>{{item.rent}} <text class="font-rent-unit">元/月</text></view>
+				</view>
+			</view>
+		</view>
+		<view class='container-line'></view>
+	</block>
+</block>

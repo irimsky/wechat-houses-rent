@@ -1,0 +1,39 @@
+<!--pages/preview/preview.wxml-->
+<view class="container">
+
+	<view wx:for="{{arr}}" class="request_view" wx:key="item" wx:for-index="idx">
+		<view class="phone-line">
+			<view>{{item.gphone}}</view>
+			<image class="right_img" src="../../images/right.png"></image>
+			<view>{{item.hphone}}</view>
+		</view>
+
+		<view class="container-line"></view>
+
+		<view class="container-inner">
+			<view class='container-img'>
+				<image mode="aspectFill" class="img-test" src='https://irimskydb.oss-cn-beijing.aliyuncs.com/pics/{{item.hid}}/1.jpg' lazy-load="true"></image>
+			</view>
+
+			<view class='container-content'>
+				<view class='user-info'>
+					<view class='user-name-time'>
+						<view class='user-name'>{{item.name}}</view>
+					</view>
+				</view>
+				<view class="content">
+					<text class='content-text'>约定时间：{{item.viewdate}}时</text>
+				</view>
+				<view class="btn_view">
+					<view><button class="btn" bindtap="phone_req" data-phone="{{ident=='host'?item.gphone:item.hphone}}">电话</button></view>
+				</view>
+			</view>
+
+		</view>
+
+
+
+	</view>
+
+
+</view>

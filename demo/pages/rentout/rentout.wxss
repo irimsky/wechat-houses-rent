@@ -1,0 +1,92 @@
+/* pages/rentout/rentout.wxss */
+page {
+  height: auto;
+  background-color: #f2f2f2;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rentout_view {
+  margin: 20rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  height: auto;
+  width: 85%;
+  display: flex;
+  border: 1px solid #22222231;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-line {
+  width: 100%;
+  height: 0.5px;
+  background-color: #ccc;
+  margin-bottom: 20rpx;
+}
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.container-img {
+  width: 30%;
+  margin-left: 5px;
+  height: auto;
+  align-items: center;
+}
+
+.ads_view{
+  font-weight: 700;
+  font-style: 17px;
+  margin-bottom: 5px;
+  
+}
+
+.phone_view{
+  font-size: 12px;
+  color: #666;
+}
+
+.rent_view{
+  margin-top: 10px;
+  font-size: 26rpx;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.img-test {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-top: 14px;
+}
+
+.text-rent{
+  font-size: 12px;
+}
+

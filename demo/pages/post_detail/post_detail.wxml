@@ -1,0 +1,26 @@
+<!--pages/post_detail/post_detail.wxml-->
+<view class='container'>
+	<view class='container-content'>
+		<view class='user-info'>
+			<image class='user-head' src='https://irimskydb.oss-cn-beijing.aliyuncs.com/avator/ava/guest/{{phone}}.jpg' mode='aspectFill'></image>
+			<view class='user-name-time'>
+				<view class='user-name'>{{name}}（{{phone}}）</view>
+				<view class='user-publish-time'>{{date}}</view>
+			</view>
+		</view>
+		<view class='content'>
+			<!-- 显示文本 -->
+			<view>
+				<text class='content-text'>{{text}}</text>
+			</view>
+		</view>
+	</view>
+
+
+	<view class='like-container'>
+		<button class='phone-btn' disabled="{{!abled}}" bindtap='onOnPhoneClick'>联系</button>
+		<button class='btn-class' disabled="{{!abled}}" bindtap='onOnDeleteClick' wx:if="{{phone==user_phone}}">删除</button>
+	</view>
+
+
+</view>

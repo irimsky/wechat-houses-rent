@@ -1,0 +1,35 @@
+<!--pages/post_house/post_house.wxml-->
+<view class="container">
+
+	<textarea class="textarea" placeholder="标题" maxlength="75" bindinput="OnAdsInput" auto-height="true"></textarea>
+
+	<textarea class="textarea2" placeholder="房型介绍（用逗号分隔关键词）" maxlength="50" bindinput="OnTypeInput"></textarea>
+
+	<view class="inputView">
+
+		<view class="inputView3">
+			<text class="label1">最大房客数： </text> <input maxlength="2" class="inputView2" type="number" bindinput="OnMaxgInput" />
+		</view>
+
+		<view class="inputView3">
+			<text class="label1">租金(元/月)： </text> <input maxlength="8" class="inputView2" type="digit" bindinput="OnRentInput" />
+		</view>
+	</view>
+
+	<block>
+		<scroll-view class="image-group" scroll-x="true">
+			<view wx:for='{{imgs}}' wx:for-index='idx' wx:key="item">
+				<image src='{{item}}' class="img_upload" mode="aspectFill">
+				</image>
+				<icon type='clear' bindtap='RemoveImg' data-index="{{idx}}" class="pos"></icon>
+			</view>
+			<image wx:if="{{img_count!=6}}" class="add_icon" mode="aspectFill" src="../../images/post-house/add-icon1.png" bindtap="UploadImg"></image>
+		</scroll-view>
+	</block>
+
+	<!--按钮-->
+	<view class="loginBtnView">
+		<button class="loginBtn" type="primary" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="OnPostClick" disabled="{{!abled}}">发布</button>
+	</view>
+
+</view>

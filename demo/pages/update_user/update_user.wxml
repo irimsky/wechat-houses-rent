@@ -1,0 +1,38 @@
+<!--pages/update_user/update_user.wxml-->
+<view class="container">
+
+	<view class="login-from">
+		<view class='hr'></view>
+		<!--姓名-->
+		<view class="inputView">
+			<image class="nameImage" src=""></image>
+			<input value="{{name}}" class="left_input" placeholder="姓名" bindinput="nameInput" />
+		</view>
+		<view class='hr'></view>
+		<textarea class="textarea" placeholder="住址" maxlength="100" bindinput="OnAdsInput" auto-height="true"></textarea>
+
+		<view wx:if="{{ident=='guest'}}">
+			<view class="inputView">
+				<image class="nameImage" src=""></image>
+				<input value="{{id}}" class="left_input" type="idcard" placeholder="身份证号" bindinput="idInput" />
+			</view>
+			<radio-group class="idview" bindchange="genderChange">
+				<radio value="1" class="radiopad" checked="true">男</radio>
+				<radio value="2" class="radiopad">女</radio>
+			</radio-group>
+		</view>
+
+		<view class="ava">
+			<label>修改头像：</label>
+			<view class="avatar">
+				<image class="avatar_icon" mode="aspectFill" bindtap="avaClick" src="{{avaSrc}}"></image>
+			</view>
+		</view>
+
+		<!--按钮-->
+		<view class="loginBtnView">
+			<button disabled="{{!abled}}" class="loginBtn" type="primary" bindtap="updateClick">修改</button>
+		</view>
+
+	</view>
+</view>

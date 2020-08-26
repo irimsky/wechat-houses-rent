@@ -1,0 +1,49 @@
+<!--pages/request/request.wxml-->
+<view class="container">
+
+	<view wx:for="{{arr}}" class="request_view" data-phone="{{item.phone}}" wx:key="item" wx:for-index="idx">
+		<view class="phone-line">
+			<view>{{ident=='host'?item.phone:user_phone}}</view>
+			<image class="right_img" src="../../images/right.png"></image>
+			<view>{{ident=='host'?user_phone:item.phone}}</view>
+		</view>
+
+		<view class="container-line"></view>
+
+		<view class="container-inner">
+			<view class='container-img'>
+				<image mode="aspectFill" class="img-test" src='https://irimskydb.oss-cn-beijing.aliyuncs.com/pics/{{item.hid}}/1.jpg' lazy-load="true"></image>
+			</view>
+
+			<view class='container-content'>
+				<view class='user-info'>
+					<view class='user-name-time'>
+						<view class='user-name'>{{item.name}}</view>
+					</view>
+				</view>
+				<view class="content">
+					<text class='content-text'>发起时间：{{item.postime}}</text>
+				</view>
+
+			</view>
+
+		</view>
+
+		<view class="btn_view">
+			<view><button wx:if="{{ident=='host'}}" disabled="{{loading}}" class="btn btn-ac" type="primary" bindtap="accept_req" data-idx="{{idx}}">接受</button></view>
+			<view><button wx:if="{{ident=='host'}}" disabled="{{loading}}" class="btn btn-ref" type="warn" bindtap="refuseClick">拒绝</button></view>
+			<view><button class="btn" bindtap="phone_req" data-phone="{{item.phone}}">电话</button></view>
+		</view>
+
+		<view hidden="{{hide_picker[idx]}}" class="picker-view">
+			选择时间：
+			<picker mode="date" bindchange="date_change" class="picker-time" value="{{nowdate}}" start="{{nowdate}}">{{picker_times[idx]}}</picker>
+			<picker class="picker-time" range="{{[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]}}" bindchange="hour_change">{{hours[idx]}} 时</picker>
+
+			<button class="certify" data-idx="{{idx}}" bindtap="verifyClick">确认</button>
+		</view>
+
+	</view>
+
+
+</view>

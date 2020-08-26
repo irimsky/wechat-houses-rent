@@ -1,0 +1,17 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view wx:for="{{posts}}" class='container' data-id="{{item.id}}" bindtap='onItemClick'>
+	<view class='container-content'>
+		<view class='user-info'>
+			<view class='user-name-time'>
+				<view class='user-publish-time'>{{item.ptime}}</view>
+			</view>
+		</view>
+		<view class='content'>
+			<block>
+				<text class='content-text'>{{item.text}}</text>
+			</block>
+		</view>
+	</view>
+
+	<view class='container-line'></view>
+</view>

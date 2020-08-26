@@ -1,0 +1,16 @@
+<!--pages/rentout/rentout.wxml-->
+<view wx:for="{{arr}}" class="container">
+	<view class="rentout_view">
+    <view class="container-img">
+      <image src="https://irimskydb.oss-cn-beijing.aliyuncs.com/pics/{{item.hid}}/1.jpg" class="img-test" mode="aspectFill"></image>
+    </view>
+    <view class="container-content">
+      <view class="ads_view">{{item.name}}</view>
+      <view class="phone_view" wx:if="{{ident=='host'}}">租赁者电话：{{item.gphone}}</view>
+      <view class="phone_view" wx:else>房主电话：{{item.hphone}}</view>
+      <view class="phone_view">租期：{{item.renttime}} ~ {{item.duetime}}</view>
+      <view class="rent_view">租金：￥{{item.rent}} <text class="text-rent" wx:if="{{ident=='host'}}"> （含手续费￥{{item.comm}}）</text></view>
+    </view>
+
+  </view>
+</view>

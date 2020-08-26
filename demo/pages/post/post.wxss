@@ -1,0 +1,214 @@
+/* pages/post/post.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px 16px;
+  margin: 0 auto;
+}
+
+.container-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+}
+
+.user-head {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.user-name-time {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.user-name {
+  font-size: 16px;
+  color: #333;
+  font-weight: 570;
+}
+
+.user-publish-time {
+  font-size: 13px;
+  color: #999;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.content-scroll {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.content-text {
+  font-size: 13px;
+  color: #666;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.content-img {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #999;
+}
+
+.img-test {
+  width: 130px;
+  height: 80.34px;
+}
+
+.view-img {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  left: 20rpx;
+  bottom: 220rpx;
+}
+
+.font-nrented {
+  font-size: 20px;
+  color: green
+}
+
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+}
+
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
+}
+
+
+/*checkbox 整体大小  */
+checkbox {
+  font-size: 10px;
+  width: 240rpx;
+  height: 40rpx;
+}
+
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #FF525C;
+}
+
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.hd {
+  border: 1rpx solid black;
+  width: 250rpx;
+  text-align: center;
+  background: white
+}
+
+.font2 {
+  font-size: 30rpx;
+  position: relative;
+  left: 50rpx;
+}
+
+.add-button {
+  position: fixed;
+  left: 85%;
+  top: 3%;
+  border: 0 solid #ffffff;
+  text-align: center;
+  width: 75rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  padding: 0px;
+  font-size: 23px;
+  border-radius: 250rpx;
+  box-shadow: 1rpx 1rpx 2rpx 2rpx rgba(28, 4, 51, 0.371);
+}

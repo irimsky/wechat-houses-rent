@@ -1,0 +1,74 @@
+<!--miniprogram/pages/homeDetail/homeDetail.wxml-->
+<swiper indicator-dots="true">
+	<swiper-item wx:for="{{img}}" wx:key="item" wx:idx="idx">
+		<image mode="aspectFill" class="img-top" src="{{item}}" data-idx="{{idx}}" bindtap="OnImgClick"></image>
+	</swiper-item>
+</swiper>
+
+<view class="info-container">
+	<view class="rentView">
+		<text class="rent">{{rent}}</text><text class="rentunit"> 元/月</text>
+	</view>
+	<view class="adsView">
+		{{ads}}
+	</view>
+
+	<view class="maxgView">最大房客数：{{maxg}}</view>
+
+	<view class="container-line"></view>
+
+	<view class="tagView">
+		<view wx:for="{{type}}" class="brView">
+			<text class="tagText">{{item}}</text>
+		</view>
+	</view>
+
+	<view class='amountBg' bindtap="OnUserClick">
+		<view class='img'>
+			<image class="img2" mode="aspectFill" src="{{avaurl}}"></image>
+		</view>
+		<view class='account'>
+			<view class='name'>
+				{{hname}}
+			</view>
+			<view class='address'>
+				{{hads}}
+			</view>
+
+		</view>
+		<view class="more">查看详情 ></view>
+	</view>
+
+</view>
+
+
+<view class="transparent"></view>
+
+<view class="longer-line"></view>
+<view class="tabbar">
+	<view wx:if="{{user_phone==hphone && user_ident=='host'}}" class="btnView">
+		<view class="buttonType">
+			<image class="btnicon" src="../../images/topic-detail/hetong2.png" bindtap="OnRentClick"></image>
+			登记
+		</view>
+		<view class="buttonType">
+			<image class="btnicon" bindtap="OnEditClick" src="../../images/topic-detail/edit.png"></image>
+			编辑
+		</view>
+		<view class="buttonType">
+			<image class="btnicon" bindtap="OnDeleteClick" src="../../images/topic-detail/delete.png"></image>
+			删除
+		</view>
+	</view>
+	<view wx:else class="btnView">
+		<view class="buttonType" bindtap="OnPhoneClick">
+			<image class="btnicon" src="../../images/topic-detail/phone.png"></image>
+			电话
+		</view>
+
+		<view class="buttonType">
+			<image class="btnicon" src="../../images/topic-detail/preview.png" bindtap="OnReqClick"></image>
+			看房
+		</view>
+	</view>
+</view>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/Login/Login",
+    "pages/update_house/update_house",
+    "pages/post/post",
+    "pages/publish/publish",
+    "pages/update_user/update_user",
+    "pages/user_info/user",
+    "pages/post_detail/post_detail",
+    "pages/register/register",
+    "pages/rentout/rentout",
+    "pages/register_rentout/register_rentout",
+    "pages/me/me",
+    "pages/preview/preview",
+    "pages/request/request",
+    "pages/homeDetail/homeDetail",
+    "pages/post_house/post_house",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+	
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Irimsky",
+    "navigationBarTextStyle": "black"
+  },
+  
+  "tabBar": {
+    "selectedColor": "#d81e06",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "找房",
+        "iconPath": "images/tab/me_unselect.png",
+        "selectedIconPath": "images/tab/me_select.png"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "text": "看贴",
+        "iconPath": "images/tab/home_unselect.png",
+        "selectedIconPath": "images/tab/home_select.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/tab/me_unselect2.png",
+        "selectedIconPath": "images/tab/me_select3.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

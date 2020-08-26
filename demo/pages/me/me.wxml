@@ -1,0 +1,74 @@
+<!--pages/mycenter/mycenter.wxml-->
+<view class='amountBg' bindtap="clickUser">
+	<block wx:if="{{login}}">
+		<view class='img' bindtap="clickAva">
+			<image class="img2" mode="aspectFill" src="{{avaurl}}"></image>
+		</view>
+		<view class='account'>
+			<view class='nick-name'>
+				{{name}}
+			</view>
+			<view class='address'>
+				{{phone}} · {{identity}}
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class='img' bindtap="clickAva">
+			<image class="img2" mode="aspectFill" src="../../images/OIP.jpg"></image>
+		</view>
+		<view class='account'>
+			<view class='nick-name'>
+				点此登录
+			</view>
+		</view>
+	</block>
+</view>
+
+<!-- 底部列表 -->
+<view class='content'>
+	<!-- 收藏列表 -->
+	<view class='line'></view>
+	<view class='item' bindtap='onReqClick'>
+		<image class='icon' src='../../images/me/request.png' style="width:22px;height:21px;"></image>
+		<text class='itemName'>看房请求</text>
+		<view class="test">
+			<view class="redDot" hidden="{{!new_request}}" />
+		</view>
+		<view class='right'>></view>
+	</view>
+
+
+
+	<view class='hr'></view>
+	<view class='item' bindtap='onPrevClick'>
+		<image class='icon' src='../../images/me/record.png' style="width:22px;height:21px;"></image>
+		<text class='itemName'>看房记录</text>
+		<view class="test">
+			<view class="redDot" hidden="{{!new_preview}}" />
+		</view>
+		<view class='right'>></view>
+	</view>
+
+	<!-- 邀请好友 -->
+	<view class='line'></view>
+	<view class='item' bindtap="onRentClick">
+		<image class='icon' src='../../images/me/rent.png' style="width:22px;height:21px;"></image>
+		<text class='itemName'>租赁记录</text>
+		<view class='right'>></view>
+	</view>
+	<view class='hr'></view>
+	<!-- 产品意见 -->
+	<view class='item' bindtap='onHistoryClick' wx:if="{{ident=='guest'}}">
+		<image class='icon' src='../../images/me/history.png' style="width:22px;height:21px;"></image>
+		<text class='itemName'>发贴历史</text>
+		<view class='right'>></view>
+	</view>
+	<view class='hr'></view>
+	<view class='item' bindtap='outClick'>
+		<image class='icon' src='../../images/me/out.png' style="width:22px;height:21px;"></image>
+		<text class='itemName'>退出登录</text>
+		<view class='right'>></view>
+	</view>
+	<view class='hr'></view>
+</view>

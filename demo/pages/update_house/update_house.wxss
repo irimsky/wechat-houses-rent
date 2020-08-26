@@ -1,0 +1,150 @@
+/* pages/update_house/update_house.wxss */
+page{ 
+  height: auto; 
+  background-color: #f2f2f2
+ } 
+
+.inputView2{
+  background-color: white;
+  border-color: grey;
+  margin: 5px;
+  width: 40%;
+  height: 50rpx;
+  padding: 10rpx 10rpx;
+  border-radius: 5px;
+  line-height: 44px; 
+}
+
+.inputView{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputView3{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.label1{
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.textarea{
+  background-color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+ }
+ 
+ .textarea2{
+  background-color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  height: 140rpx;
+  border-radius: 5px;
+ }
+
+.img_upload{
+  height: 70rpx;
+  width: 70rpx;
+}
+
+ .container { 
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  padding: 0; 
+  margin-top: 20px;
+  box-sizing: border-box; 
+  background-color: #f2f2f2 
+ } 
+  
+
+ /*输入框*/ 
+ .nameImage, .keyImage { 
+  margin-left: 22px; 
+  width: 14px; 
+  height: 14px 
+ } 
+  
+ .loginLab { 
+  margin: 15px 15px 15px 10px; 
+  color: #545454; 
+  font-size: 14px 
+ } 
+ .inputText { 
+  flex: block; 
+  float: right; 
+  text-align: right; 
+  margin-right: 22px; 
+  margin-top: 11px; 
+  color: black; 
+  font-size: 14px 
+ } 
+  
+ /*按钮*/ 
+ .loginBtnView { 
+  width: 100%; 
+  height: auto; 
+  background-color: #f2f2f2; 
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+  padding-bottom: 0px; 
+ } 
+  
+ .loginBtn { 
+  width: 80%; 
+  margin-top: 5px; 
+ } 
+
+ .image-group {
+  display: flex;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.image-group view{
+  display: inline-block;
+  flex-direction: row;
+  width: 485rpx;
+  height: 300rpx;
+  margin-right: 20rpx;
+  background-color: #f2f2f2;
+}
+
+.image-group view image{
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.image-group view icon{
+  display: inline-block;
+  vertical-align: top;
+  position: relative
+}
+
+.pos{
+  top: 20rpx;
+  right: 80rpx;
+}
+
+.add_icon{
+  width: 485rpx;
+  height: 295rpx;
+  border: dashed 2px rgba(92, 92, 92, 0.905);
+  border-radius: 5px;
+  margin-left: 10px;
+  
+}
