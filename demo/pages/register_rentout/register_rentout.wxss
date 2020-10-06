@@ -1,0 +1,69 @@
+/* pages/register_rentout/register_rentout.wxss */
+
+Page{
+  background-color:#f2f2f2;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.house_container{
+  background-color: white;
+  border: grey solid 1px;
+  border-radius: 10px;
+  height: 250rpx;
+  width: 600rpx;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-test {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20px 15px;
+}
+
+.house-ads{
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 15rpx;
+  width: 320rpx;
+}
+
+.phone-input-view{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input{
+  background-color: white;
+  border: grey solid 1px;
+  width: 213rpx;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.input-date{
+  background-color: white;
+  border: grey solid 1px;
+  width: 80rpx;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.btn{
+  margin-top: 40px;  
+  width: 600rpx;
+}

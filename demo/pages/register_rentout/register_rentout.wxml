@@ -1,0 +1,21 @@
+<!--pages/register_rentout/register_rentout.wxml-->
+
+<view class="container">
+	<view class="house_container">
+		<image mode="aspectFill" class="img-test" src='https://irimskydb.oss-cn-beijing.aliyuncs.com/pics/{{hid}}/1.jpg' lazy-load="true"></image>
+		<view class='house-ads'>{{ads}}</view>
+	</view>
+
+	<view class="phone-input-view">
+		<text>租赁者电话：</text> <input type="number" class="input" maxlength="11" bindinput="phone_input"></input>
+	</view>
+	<view class="phone-input-view">
+    <text>从：</text> <picker class="input" mode="date" fields="month" bindchange="st_change">{{styear}} 年 {{stmonth}} 月</picker> 
+	</view>
+	<view class="phone-input-view">
+		<text>至： </text> <picker class="input" mode="date" fields="month" bindchange="ed_change">{{edyear}} 年 {{edmonth}} 月</picker> 
+	</view>
+
+  <button type="primary" class="btn" bindtap="certify">确认</button>
+
+</view>
