@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user_phone: '18052786989',
+    user_phone: '',
     user_ident: 'host',
     id: '',
     phone: '',
